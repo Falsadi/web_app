@@ -1,0 +1,15 @@
+<!-- flag.html (Hidden Flag Page) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Flag</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<h1>Access Granted</h1>
+<p>Decrypted Message: "Go to balcony, and get your prize"</p>
+<a href="{{ url_for('home') }}" class="nav-link" id="home-link">Back to home</a>
+</body>
+</html>

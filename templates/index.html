@@ -1,0 +1,33 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Challenge</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+<canvas class="matrix"></canvas>
+<header>
+    <nav>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="CamelCode Logo">
+        </div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}" class="nav-link" id="home-link">Home</a>
+            <a href="{{ url_for('blog') }}" class="nav-link" id="blog-link">Blog</a>
+            <a href="{{ url_for('about') }}" class="nav-link" id="about-link">About Us</a>
+            <a href="{{ url_for('contact') }}" class="nav-link" id="contact-link">Contact</a>
+        </div>
+    </nav>
+</header>
+<div class="container box">
+    <h1 class="challenge glitch">You have 60 minutes to hack me — if you can</h1>
+    <div class="countdown" id="timer">60:00</div>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

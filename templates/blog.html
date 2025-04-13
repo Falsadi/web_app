@@ -1,0 +1,48 @@
+<!-- blog.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - CamelCode</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<canvas class="matrix"></canvas>
+<header>
+  <nav>
+    <div class="logo-container">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="CamelCode Logo">
+    </div>
+
+    <div class="nav-links">
+      <a href="{{ url_for('home') }}" class="nav-link" id="home-link">Home</a>
+      <a href="{{ url_for('blog') }}" class="nav-link" id="blog-link">Blog</a>
+      <a href="{{ url_for('about') }}" class="nav-link" id="about-link">About Us</a>
+      <a href="{{ url_for('contact') }}" class="nav-link" id="contact-link">Contact</a>
+    </div>
+
+  </nav>
+</header>
+
+<div class="container blog-box">
+  <!-- <h1>Cybersecurity Blog</h1> -->
+  <div class="blog-posts">
+    <div class="post">
+      <h2>Phishing</h2>
+      <p>A scam where attackers pretend to be a trusted person or company (like a bank or email provider) to trick you into giving away personal info like passwords or credit card numbers</p>
+    </div>
+    <div class="post">
+      <h2>Ransomware</h2>
+      <p>A type of malware that locks or encrypts your files, then demands money (a ransom) to unlock them</p>
+    </div>
+    <div class="post">
+      <h2>Trojan Horse</h2>
+      <p>A malicious program that looks safe or helpful, but once you open or install it, it secretly lets hackers into your computer</p>
+    </div>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

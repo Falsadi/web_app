@@ -1,0 +1,44 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - CamelCode</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<canvas class="matrix"></canvas>
+<header>
+  <nav>
+    <div class="logo-container">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="CamelCode Logo">
+    </div>
+    <div class="nav-links">
+      <a href="{{ url_for('home') }}" class="nav-link" id="home-link">Home</a>
+      <a href="{{ url_for('blog') }}" class="nav-link" id="blog-link">Blog</a>
+      <a href="{{ url_for('about') }}" class="nav-link" id="about-link">About Us</a>
+      <a href="{{ url_for('contact') }}" class="nav-link" id="contact-link">Contact</a>
+    </div>
+
+  </nav>
+</header>
+
+<div class="container contact-box">
+  <h1>Contact Us</h1>
+  <div class="contact-content">
+    <div class="profile">
+      <img src="{{ url_for('static', filename='images/farhan.jpg') }}" alt="Farhan Alsadi" class="profile-img">
+      <div class="profile-info">
+        <h3>Farhan Alsadi</h3>
+        <p>AI, Programming, and Cybersecurity Trainer</p>
+        <p>If you have any inquiries, feel free to reach out via email.</p>
+        <p>📧 <a href="mailto:falsadi@camelcodeqa" class="email-link">falsadi@camelcodeqa.com</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
