@@ -5,13 +5,17 @@ app.secret_key = 'your_secret_key'  # Secret key for session management
 
 # Dummy credentials
 users = {
-    "admin": "password123",
-    "user1": "mypassword"
+    "admin": "caramel"
 }
 
 @app.route('/')
+def index():
+    return redirect(url_for('home'))  # Redirects to /home
+
+@app.route('/home')
 def home():
     return render_template('index.html')
+
 
 @app.route('/admin', methods=['GET', 'POST'])
 def admin_login():
