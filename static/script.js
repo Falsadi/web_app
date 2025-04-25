@@ -97,7 +97,7 @@ function checkAnswer() {
     const flagOutput = document.getElementById("flag-output");
     const inputContainer = document.querySelector(".input-container");
 
-    const correctAnswer = "Go to balcony, and get your prize"; // Ensure this is the expected answer
+    const correctAnswer = "I successfully hacked the website!"; // Ensure this is the expected answer
     const userInput = userInputField.value.trim();
 
     if (userInput.toLowerCase() === correctAnswer.toLowerCase()) {
@@ -113,7 +113,7 @@ function checkAnswer() {
         inputContainer.style.display = "none";
 
         // Play success sound
-        const audio = new Audio("sounds/game_win.mp3"); // Ensure file exists
+        const audio = new Audio("/static/sounds/game_win.mp3"); // Ensure file exists
         audio.play();
 
         // Create and display the congrats message
@@ -136,7 +136,7 @@ function checkAnswer() {
         errorMessage.classList.add("wrong-message"); // Add classes for styling
         errorMessage.textContent = "❌ Incorrect answer. Try again!";
         document.body.appendChild(errorMessage);
-        const audio = new Audio("sounds/wrong_answer.mp3"); // Ensure file exists
+        const audio = new Audio("/static/sounds/wrong_answer.mp3"); // Ensure file exists
         audio.play();
         // Animate error message
         setTimeout(() => {

@@ -10,8 +10,13 @@ users = {
 }
 
 @app.route('/')
+def index():
+    return redirect(url_for('home'))  # Redirects to /home
+
+@app.route('/home')
 def home():
     return render_template('index.html')
+
 
 @app.route('/admin', methods=['GET', 'POST'])
 def admin_login():

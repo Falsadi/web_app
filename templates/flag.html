@@ -16,7 +16,7 @@
 
         <h2>You are Almost There!!</h2>
         <p class="highlighted-text">🔐 The final step is to uncover the secret hidden in this encrypted flag:</p>
-        <p id="flag-output" class="flag-text">Ai ni vufiewr, uhx ayn sioj jlcty</p>
+        <p id="flag-output" class="flag-text">O yaiikyylarre ngiqkj znk ckhyozk!</p>
 
 
         <div class="input-container">
@@ -35,6 +35,12 @@
     </div>
 
 </div>
+<script>
+    // Inject the URLs of the audio files dynamically using Flask
+    var correctAnswerAudioUrl = "{{ url_for('static', filename='sounds/game_win.mp3') }}";
+    var wrongAnswerAudioUrl = "{{ url_for('static', filename='sounds/wrong_answer.mp3') }}";
+</script>
+
 <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
