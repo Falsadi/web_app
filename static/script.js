@@ -163,3 +163,43 @@ function createConfetti() {
         confetti.style.animationDuration = (Math.random() * 2 + 2) + "s";
     }
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("adminLoginForm");
+
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const response = await fetch("/admin", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            window.location.href = data.redirect;
+        } else {
+            console.log("Incorrect answer.");
+
+            const errorMessage = document.createElement("div");
+            errorMessage.classList.add("wrong-message");
+            errorMessage.textContent = "❌ Incorrect answer. Try again!";
+            document.body.appendChild(errorMessage);
+
+            const audio = new Audio("/static/sounds/wrong_answer.mp3");
+            audio.play();
+
+            setTimeout(() => {
+                errorMessage.classList.add("show");
+            }, 100);
+
+            setTimeout(() => {
+                errorMessage.classList.remove("show");
+                setTimeout(() => errorMessage.remove(), 500);
+            }, 3000);
+        }
+    });
+});

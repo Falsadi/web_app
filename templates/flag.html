@@ -8,8 +8,33 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-<h1>Access Granted</h1>
-<p>Decrypted Message: "Go to balcony, and get your prize"</p>
-<a href="{{ url_for('home') }}" class="nav-link" id="home-link">Back to home</a>
+<canvas class="matrix"></canvas>
+
+<!-- div id="error-message" class="error-message"></div-->
+
+<div class="success-content">
+
+        <h2>You are Almost There!!</h2>
+        <p class="highlighted-text">🔐 The final step is to uncover the secret hidden in this encrypted flag:</p>
+        <p id="flag-output" class="flag-text"></p>
+
+
+        <div class="input-container">
+            <input type="text" id="user-input" class="answer-box" placeholder="Enter the secret here...">
+            <button onclick="checkAnswer()" class="submit-btn">Submit</button>
+        </div>
+
+
+    <div class="hacker-message-box" id="hacker-message-box">
+        <div class="hacker-icon">
+            <img src="{{ url_for('static', filename='images/hacker2.png') }}" alt="CamelCode Logo">
+        </div>
+        <div class="hacker-text glitch-text" data-text="Now you're following my lead to become a real hacker...">
+            Now you're following my lead to become a real hacker...
+        </div>
+    </div>
+
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

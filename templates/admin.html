@@ -28,48 +28,12 @@
   <h1 id="admin-title">Admin Login</h1>
 
 
-  <form class="login-form" method="post" action="/admin">
+  <form id="adminLoginForm" class="login-form" method="post" action="/admin">
     <input type="text" name="username" placeholder="Username" required>
     <input type="password" name="password" placeholder="Password" required>
     <button type="submit">Login</button>
   </form>
-  
-  <div id="error-message" class="error-message"></div>
-  
-  <div class="success-content" style="display: none;">
-    <!-- flag and hacker message stuff -->
-  </div>
-  
 
-  <div id="error-message" class="error-message"></div>
-
-<!--   
-  <div class="success-content" style="display: none;">
-    
-    <h2>You are Almost There!!</h2>
-    <p class="highlighted-text">🔐 The final step is to uncover the secret hidden in this encrypted flag:</p>
-    <p id="flag-output" class="flag-text"></p>
-
-    
-    <div class="input-container">
-      <input type="text" id="user-input" class="answer-box" placeholder="Enter the secret here...">
-      <button onclick="checkAnswer()" class="submit-btn">Submit</button>
-    </div> -->
-
-    <!-- Success message (hidden by default) -->
-    <!-- audio id="success-sound" src="success.mp3"></audio> -->
-
-    <!-- Hacker Message (hidden by default) -->
-    <div class="hacker-message-box" id="hacker-message-box" style="display: none;">
-      <div class="hacker-icon">
-        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="CamelCode Logo">
-      </div>
-      <div class="hacker-text glitch-text" data-text="Now you're following my lead to become a real hacker...">
-        Now you're following my lead to become a real hacker...
-      </div>
-    </div>
-
-  </div>
 </div>
 
 
